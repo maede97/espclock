@@ -1,7 +1,9 @@
 #include <Arduino.h>
 #include <ArduinoBLE.h>
-
-#include <Fonts/FreeSansBold18pt7b.h> // A custom font
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7735.h>
+#include <Adafruit_BME280.h>
+#include "MyClock.h"
 
 #define TFT_MOSI 21
 #define TFT_SCLK 20
@@ -13,12 +15,6 @@
 #define BME_SCL 2
 #define BME_GND 1
 #define BME_VDD 0
-
-#include <Adafruit_GFX.h>
-#include <Adafruit_ST7735.h>
-#include <Adafruit_BME280.h>
-
-#include "MyClock.h"
 
 #define SERVICE_UUID "55c02300-ea68-4a19-a11d-b117f4e2f2c1"
 BLEService bleService(SERVICE_UUID);
